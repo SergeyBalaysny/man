@@ -95,6 +95,9 @@ begin
 		s_WR <= '0';
 		wait for 50 ns;
 		s_WR <= '1';
+
+		wait for 10 ns;
+		s_INP_DATA <= (others => 'Z');
 		wait until s_BUSY = '1';
 		s_WR <= '0';
 		wait;

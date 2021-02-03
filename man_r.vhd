@@ -136,10 +136,10 @@ begin
 					when st_add_bit =>	if s_COUNT = s_SECOND_DELAY then
 
 											if s_BIT_BUFER = "01" then
-												s_BUFFER <= s_BUFFER(6 downto 0) & '1';
+												s_BUFFER <= s_BUFFER(6 downto 0) & '0';
 												
 											else
-												s_BUFFER <= s_BUFFER(6 downto 0) & '0';
+												s_BUFFER <= s_BUFFER(6 downto 0) & '1';
 
 											end if;
 											s_COUNT <= 0;

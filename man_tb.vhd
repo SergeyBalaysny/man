@@ -23,9 +23,25 @@ architecture man_tb_behav of man_tb is
 	end component;
 
 
-	SIGNAL s_CLK, s_ENA, s_RST, s_RDY: std_logic;
-	SIGNAL s_IN_DATA: std_logic;
+	component  man_t is
+	generic(c_speed: integer:= 10);
+	port (
+			p_i_clk: 	in std_logic;
+			p_i_ena: 	in std_logic;				-- сигнал выбора устройства
+			p_i_rst:	in std_logic;				-- сигнал сброса
+			p_i_data:	in std_logic_vector(7 downto 0); -- байт данных для передачи
+			p_i_wr:		in std_logic; 				-- сигнал инициализции передачи данных
+			p_o_busy:	out std_logic; 				-- сигнал занятости линии передачи данных
+			p_o_t_data:	inout std_logic 				-- выходная линия для передачи данных 
+	);
+	end component;
+
+
+	SIGNAL s_CLK, s_ENA_R, s_ENA_T, s_RST, s_RDY: std_logic;
+	SIGNAL s_DATA_BUS: std_logic;
 	SIGNAL s_OUT_DATA: std_logic_vector(7 downto 0);
+	SIGNAL s_INP_DATA:	std_logic_vector(7 downto 0);
+	SIGNAL s_BUSY, s_WR: std_logic;
 
 	constant t1 : TIME := 80 ns; 
 begin
@@ -37,15 +53,28 @@ begin
 					)
 					port map (
 									p_i_clk => s_CLK,
-									p_i_ena => s_ENA,
+									p_i_ena => s_ENA_R,
 									p_i_rst => s_RST,
-									p_i_r_data => s_IN_DATA,
+									p_i_r_data => s_DATA_BUS,
 									p_o_rdy => s_RDY,
 									p_o_data => s_OUT_DATA
 								);
 
 
-	s_ENA <= '1';
+	trans_module: man_t 
+					generic map (	c_speed => 80)
+					port map (		p_i_clk => s_CLK,
+									p_i_ena => s_ENA_T,
+									p_i_rst => s_RST,
+									p_i_data => s_INP_DATA,
+									p_i_wr 	=> s_WR,
+									p_o_busy => s_BUSY,
+									p_o_t_data => s_DATA_BUS
+						);
+
+
+	s_ENA_R <= '1';
+	s_ENA_T <= '0';
 
 	process begin
 		s_CLK <= '1';
@@ -62,65 +91,16 @@ begin
 	end process;
 
 	process begin
-	-- preamb
-		s_IN_DATA <= 'Z';
-		wait for 30 ns;
-		s_IN_DATA <= '1';
-		wait for t1;
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-		s_IN_DATA <= '0';
-		wait for t1;
-
-	-- data
-	-- 0 1
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 1 1
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 2 1
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 3 0
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 4 1
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 5 0
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 6 1
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-	-- 7 0
-		s_IN_DATA <= '0';
-		wait for t1;
-		s_IN_DATA <= '1';
-		wait for t1;
-
-		s_IN_DATA <= 'Z';
+		s_INP_DATA <= "00110101";
+		s_WR <= '0';
+		wait for 50 ns;
+		s_WR <= '1';
+		wait until s_BUSY = '1';
+		s_WR <= '0';
 		wait;
 	end process;
 
-
+	
 
 
 

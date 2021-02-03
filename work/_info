@@ -1,0 +1,202 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Documents/Quartus/ki4_upr
+T_opt
+!s110 1610046390
+VYQnTR^o]H:VgE@bCWD:dk0
+04 8 14 work man_t_tb man_t_tb_behav 1
+=1-5891cff742cf-5ff75bb6-115-3098
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+R0
+T_opt1
+!s110 1612350664
+VV^=[KUIM?iO_F602P8iE33
+04 6 12 work man_tb man_tb_behav 1
+=2-90b11c7f07c2-601a84c8-30c-1474
+R1
+R2
+n@_opt1
+OL;O;10.5;63
+Eman_r
+Z3 w1612350656
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 dC:/Users/Budkova/Documents/Quartus/man
+Z9 8C:\Users\Budkova\Documents\Quartus\man\man_r.vhd
+Z10 FC:\Users\Budkova\Documents\Quartus\man\man_r.vhd
+l0
+L6
+VYNN;H3`4?@AD1<je5UfHz3
+!s100 cTHPM8m`Mf=MhNiN9akD?2
+Z11 OL;C;10.5;63
+32
+Z12 !s110 1612350661
+!i10b 1
+Z13 !s108 1612350661.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\Budkova\Documents\Quartus\man\man_r.vhd|
+Z15 !s107 C:\Users\Budkova\Documents\Quartus\man\man_r.vhd|
+!i113 0
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
+Aman_r_behav
+R4
+R5
+R6
+R7
+DEx4 work 5 man_r 0 22 YNN;H3`4?@AD1<je5UfHz3
+l39
+L20
+VDfMBOVnb@ZZUSMz`?Dbga1
+!s100 _hhZ:GE[L2NVc5moJU<jV0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Eman_t
+Z18 w1610046558
+R4
+R5
+R6
+R7
+R8
+Z19 8C:\Users\Budkova\Documents\Quartus\man\man_t.vhd
+Z20 FC:\Users\Budkova\Documents\Quartus\man\man_t.vhd
+l0
+L6
+Vk1am8_=PFUn:T0KRPFD<W1
+!s100 C]_hfng:1ZF?S5G2oHOaz0
+R11
+32
+Z21 !s110 1610948962
+!i10b 1
+Z22 !s108 1610948962.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\Budkova\Documents\Quartus\man\man_t.vhd|
+Z24 !s107 C:\Users\Budkova\Documents\Quartus\man\man_t.vhd|
+!i113 0
+R16
+R17
+Aman_t_behav
+R4
+R5
+R6
+R7
+Z25 DEx4 work 5 man_t 0 22 k1am8_=PFUn:T0KRPFD<W1
+l28
+L19
+ViJUJ<^Oc]T5PUMb@Nz_XF3
+!s100 z:M6P8_TER9U1URf6ikFa2
+R11
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 0
+R16
+R17
+Eman_t_tb
+Z26 w1610046088
+R4
+R5
+R6
+R7
+R8
+Z27 8C:\Users\Budkova\Documents\Quartus\man\man_t_tb.vhd
+Z28 FC:\Users\Budkova\Documents\Quartus\man\man_t_tb.vhd
+l0
+L6
+V8X4heod9z]669V7RzodWb3
+!s100 kf8;Lm4oXifM9Fz2BeEb?2
+R11
+32
+R21
+!i10b 1
+R22
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\Budkova\Documents\Quartus\man\man_t_tb.vhd|
+Z30 !s107 C:\Users\Budkova\Documents\Quartus\man\man_t_tb.vhd|
+!i113 0
+R16
+R17
+Aman_t_tb_behav
+R25
+R4
+R5
+R6
+R7
+DEx4 work 8 man_t_tb 0 22 8X4heod9z]669V7RzodWb3
+l17
+L10
+VC^VI^KCb_l]cB@<3AcM>Q0
+!s100 oUO3^eiJ?len<TT0LUjWQ3
+R11
+32
+R21
+!i10b 1
+R22
+R29
+R30
+!i113 0
+R16
+R17
+Eman_tb
+Z31 w1612350083
+R4
+R5
+R6
+R7
+R8
+Z32 8C:\Users\Budkova\Documents\Quartus\man\man_tb.vhd
+Z33 FC:\Users\Budkova\Documents\Quartus\man\man_tb.vhd
+l0
+L6
+V`g5gX?KUAaGD4njDgf7k[3
+!s100 7=U3UTV::fLWES8RPPa_m0
+R11
+32
+Z34 !s110 1612350088
+!i10b 1
+Z35 !s108 1612350088.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\Budkova\Documents\Quartus\man\man_tb.vhd|
+Z37 !s107 C:\Users\Budkova\Documents\Quartus\man\man_tb.vhd|
+!i113 0
+R16
+R17
+Aman_tb_behav
+R4
+R5
+R6
+R7
+DEx4 work 6 man_tb 0 22 `g5gX?KUAaGD4njDgf7k[3
+l47
+L10
+VD^1DfPn]c^0TBM=2f7M?21
+!s100 ;?heWlL=e3`hHQ6PzbQNh0
+R11
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 0
+R16
+R17
